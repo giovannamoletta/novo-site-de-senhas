@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas Cat-tástico 🐾</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="emoji-background"></div>
+
+    <header>
+        <h1>🐾 MeowPass Generator 🐾</h1>
+        <p>Senhas fortes com a fofura que você precisa!</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <div class="password-display">
+                <input type="text" id="password-input" readonly placeholder="Sua senha aparecerá aqui">
+                <button id="copy-btn" class="interactive-btn" title="Copiar Senha">📋 Copiar</button>
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label for="length-slider">Tamanho da senha: <span id="length-val">16</span></label>
+                    <input type="range" id="length-slider" min="8" max="32" value="16">
+                </div>
+
+                <div class="options-grid">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="chk-uppercase" checked>
+                        <span class="checkmark"></span> Maiúsculas (A-Z)
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="chk-lowercase" checked>
+                        <span class="checkmark"></span> Minúsculas (a-z)
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="chk-numbers" checked>
+                        <span class="checkmark"></span> Números (0-9)
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="chk-symbols" checked>
+                        <span class="checkmark"></span> Símbolos (!@#$)
+                    </label>
+                </div>
+
+                <button id="generate-btn" class="interactive-btn main-action-btn">🐾 Gerar Senha Segura 🐾</button>
+            </div>
+        </section>
+
+        <section class="fun-zone">
+            <h3>🎹 Teclado Meow-musical (Divirta-se!)</h3>
+            <div class="cat-keyboard">
+                <button class="key-btn" data-sound="🐱">🐱 Meow</button>
+                <button class="key-btn" data-sound="🦁">🦁 Roar</button>
+                <button class="key-btn" data-sound="🐾">🐾 Pack</button>
+                <button class="key-btn" data-sound="💖">💖 Love</button>
+                <button class="key-btn" data-sound="✨">✨ Spark</button>
+                <button class="key-btn" data-sound="🐈">🐈 Cat</button>
+            </div>
+            <p id="fun-display">Toque nas teclas para fazer mágica!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido com 💖 e Segurança Criptográfica. Suas senhas nunca saem do seu navegador.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

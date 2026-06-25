@@ -1,0 +1,210 @@
+/* Variáveis de Cores (Paleta Rosa) */
+:root {
+    --pink-light: #ffe3ec;
+    --pink-medium: #ffb3c6;
+    --pink-main: #ff85a1;
+    --pink-dark: #fbb1bd;
+    --pink-deep: #ff477e;
+    --text-color: #4a1525;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--pink-light);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Fundo Dinâmico com Emojis Espalhados */
+#emoji-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.bg-emoji {
+    position: absolute;
+    font-size: 1.5rem;
+    opacity: 0.25;
+    user-select: none;
+    transition: transform 0.5s ease;
+}
+
+/* Cabeçalho e Rodapé */
+header {
+    background-color: var(--pink-medium);
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--pink-deep);
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background-color: var(--pink-medium);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+/* Container Principal */
+.container {
+    max-width: 600px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card, .fun-zone {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(255, 133, 161, 0.2);
+    border: 3px solid var(--pink-medium);
+}
+
+/* Área de Exibição da Senha */
+.password-display {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+#password-input {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 1.2rem;
+    border: 2px solid var(--pink-medium);
+    border-radius: 10px;
+    background-color: var(--pink-light);
+    color: var(--text-color);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+/* Botões Interativos */
+.interactive-btn {
+    background-color: var(--pink-main);
+    color: var(--white);
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 0 var(--pink-deep);
+}
+
+.interactive-btn:hover {
+    background-color: var(--pink-deep);
+}
+
+.interactive-btn:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+.main-action-btn {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+/* Controles e Sliders */
+.control-group {
+    margin-bottom: 1.5rem;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#length-slider {
+    width: 100%;
+    accent-color: var(--pink-deep);
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+/* Custom Checkboxes */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-weight: 500;
+    user-select: none;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+    accent-color: var(--pink-deep);
+    width: 18px;
+    height: 18px;
+}
+
+/* Zona Divertida - Teclas Interativas */
+.fun-zone h3 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.cat-keyboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.key-btn {
+    background: var(--pink-light);
+    border: 2px solid var(--pink-main);
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.key-btn:active {
+    background: var(--pink-medium);
+    transform: scale(0.95);
+}
+
+#fun-display {
+    text-align: center;
+    font-style: italic;
+    color: var(--pink-deep);
+    min-height: 24px;
+}
